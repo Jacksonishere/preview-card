@@ -60,6 +60,12 @@ button:hover {
   padding-block: .9375rem;
 }
 
+@media (min-width: 87.5em) {
+  button {
+    margin-top: 5.625rem;
+  }
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -133,6 +139,9 @@ main section:not(:first-child) {
   }
   main section:not(:first-child) {
     margin: 0 0 0 -1rem;
+  }
+  main section p {
+    max-width: 212px;
   }
 }
 

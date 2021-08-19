@@ -44,6 +44,10 @@ button {
         background-color: transparent;
         padding-block: .9375rem; 
     }
+
+    @include breakpoint-up(xlarge){
+        margin-top: 5.625rem;
+    }
 }
 
 
@@ -78,9 +82,13 @@ main{
             &:last-child{
                 width: unquote("min(87%, 327px)");
             }
-            border-radius: 8px;
             &:not(:first-child){
                 margin: 0 0 0 -1rem;
+            }
+            border-radius: 8px;
+
+            p{
+                max-width: 212px;
             }
         }
     }
@@ -114,6 +122,5 @@ main{
             }
         }
     }
-    
 }
 
