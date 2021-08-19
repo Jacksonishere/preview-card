@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 0.875rem;
+	background-color: $very-light-gray;
+    min-height: 100vh;
+    @include flex(column, center, center);
+}
+
+p {
+	color: $transparent-white;
+	font-family: "Lexend Deca", sans-serif;
+    line-height: 1.8;
+}
+
+h1{
+	font-family: "Big Shoulders Display", sans-serif;
+    font-size: 2rem;
+    padding: 2.125rem 0;
+	color: $very-light-gray;
+	text-transform: uppercase;
+}
+
+button {
+    border: none;
+	background-color: $very-light-gray;
+	width: 9.125rem;
+	height: 3rem;
+    margin-top: 1.75rem;
+	padding: 1rem 2rem;
+	border-radius: 16rem;
+	font-size: 0.875rem;
+	font-family: "Lexend Deca", sans-serif;
+    transition: background-color .3s ease-in-out;
+
+    &:hover{
+        border: 1px solid white;
+        background-color: transparent;
+        padding-block: .9375rem; 
+    }
+}
+
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+main{
+    @include flex(column, center, center);
+    padding: 5.5rem 0;
+
+    @include breakpoint-up(xlarge){
+        min-width: calc(927px + 5.5rem);
+        @include flex(row, center, center);
+        padding: 0;
+    }
+
+    section {
+        @include flex(column, flex-start);
+        width: unquote("min(87%, 343px)");
+        padding: 3.0625rem;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+
+        &:not(:first-child){
+            margin-top: -.5rem;
+        }
+
+        @include breakpoint-up(xlarge){
+            &:last-child{
+                width: unquote("min(87%, 327px)");
+            }
+            border-radius: 8px;
+            &:not(:first-child){
+                margin: 0 0 0 -1rem;
+            }
+        }
+    }
+    
+    .sedans{
+        background-color: $bright-orange;
+        button{
+            color: $bright-orange;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+
+    .suvs{
+        background-color: $dark-cyan;
+        button{
+            color: $dark-cyan;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+
+    .luxury{
+        background-color: $very-dark-cyan;
+        button{
+            color: $very-dark-cyan;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+    
+}
+
